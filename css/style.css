@@ -1,0 +1,122 @@
+/* Color variables */
+:root {
+  --white-color: #fff;
+  --bg-color: #f9f9f9;
+  --gray-color: #ccc;
+  --primary-color: #007bff;
+  --secondary-color: #333;
+}
+
+/* General body styling */
+body {
+  background: var(--bg-color);
+  color: var(--secondary-color);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navbar link color */
+.nav-item .nav-link {
+  color: var(--white-color) !important;
+  transition: color 0.3s;
+}
+.nav-item .nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+/* Hero section */
+.hero {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  color: var(--white-color);
+}
+
+.hero img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 160px;
+  object-fit: cover;
+  border: 5px solid var(--white-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1, .hero h2 {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+/* Skills card styling */
+#skills .card {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+#skills .card:hover {
+  transform: translateY(-10px);
+}
+#skills i {
+  height: 80px;
+  width: 80px;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+/* Portfolio images */
+#portfolio .card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: transform 0.3s;
+}
+#portfolio .card:hover img {
+  transform: scale(1.05);
+}
+
+/* Contact section */
+#contact {
+  background: url("../images/contact-bg.jpeg") center/cover no-repeat;
+  color: var(--white-color);
+  padding: 4rem 0;
+}
+#contact .form-control {
+  border-radius: 5px;
+}
+
+/* Footer styling */
+footer {
+  background: #333;
+  color: var(--white-color);
+  padding: 1rem 0;
+}
+footer p {
+  margin: 0;
+}
+footer .social-icons a {
+  background: var(--primary-color);
+  color: var(--white-color);
+  transition: background-color 0.3s;
+}
+footer .social-icons a:hover {
+  background: #0056b3;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 3rem 1rem;
+   
+  }
+  .hero h1, .hero h2 {
+    font-size: 1.5rem;
+  }
+  #skills .card, #portfolio .card {
+    width: 100% !important;
+  }
+}
